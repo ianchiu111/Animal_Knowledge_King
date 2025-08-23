@@ -1,0 +1,10 @@
+
+## files
+.gitignore
+*.env
+memo.md
+
+
+## folders
+images
+logs
