@@ -71,7 +71,7 @@ def preprocess(example):
     example["pixel_values"] = inputs["pixel_values"].squeeze(0).to(torch.float32)  # 移除 batch 維度
     return example
 
-# 對整個 dataset 執行 preprocess，
+### 對整個 dataset 執行 preprocess，
 for split in dataset:
     dataset[split] = dataset[split].map(preprocess)
     dataset[split].set_format(type="torch", columns=["pixel_values", "label"])
