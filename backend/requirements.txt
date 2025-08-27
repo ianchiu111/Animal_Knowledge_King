@@ -8,3 +8,6 @@ transformers==4.41.2
 opencv-python
 flask
 flask-cors
+flask_sqlalchemy
+psycopg2-binary
+dotenv

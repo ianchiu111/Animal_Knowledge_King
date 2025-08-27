@@ -41,7 +41,7 @@ function CameraGame() {
       const formData = new FormData();
       formData.append("file", blob, "capture.png");
       try {
-        const res = await fetch("http://localhost:5000/api/predict", {
+        const res = await fetch("http://localhost:5000/api/v1/predict_image_category", {
         method: "POST",
         body: formData,
         }); 
