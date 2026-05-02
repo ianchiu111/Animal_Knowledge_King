@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-load_dotenv("backend/.env")
+load_dotenv(".env")
 
 import torch
 from PIL import Image
