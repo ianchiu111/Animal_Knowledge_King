@@ -106,6 +106,6 @@ def health():
 
 
 if __name__ == "__main__":
-    port = 5001  # Default port
+    port = 8080  # Default port
     logger.info(f"Starting Flask app on port {port}...")
     app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
