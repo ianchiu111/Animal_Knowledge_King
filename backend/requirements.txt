@@ -1,9 +1,0 @@
-datasets==4.8.5
-dotenv
-Pillow==12.2.0
-torch
-transformers[torch]
-scikit-learn
-
-# database
-supabase

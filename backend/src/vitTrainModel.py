@@ -12,6 +12,13 @@ import tkinter as tk
 from tkinter import filedialog
 
 class vitTraining:
+    """
+    step 1: _set_labels()
+    step 2: _load_pretrained_model()
+    step 3: fineTuned()
+    step 4-1: _load_inference_model() -> inference()
+    step 4-2: inference()
+    """
     def __init__(self):
         raw_dataset = load_dataset(
             "imagefolder", 

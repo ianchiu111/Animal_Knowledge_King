@@ -72,7 +72,6 @@ settings.yaml
 chroma/
 chroma_db/
 db/
-database/
 *.db
 *.sqlite
 *.sqlite3
