@@ -8,9 +8,6 @@ from datasets import load_dataset, DatasetDict
 from sklearn.model_selection import train_test_split
 from transformers import AutoModelForImageClassification, AutoImageProcessor, Trainer, TrainingArguments
 
-import tkinter as tk
-from tkinter import filedialog
-
 class vitTraining:
     """
     step 1: _set_labels()
@@ -167,24 +164,7 @@ class vitTraining:
         label = self.inf_model.config.id2label[pred]
         return pred, label
 
-    def test(self):
-        """
-        Use local image file to test the inference() function
-        """
-        root = tk.Tk()
-        root.withdraw() 
-        file_path = filedialog.askopenfilename(
-            title="Select Image",
-            filetypes=[("Image files", "*.jpg *.jpeg *.png")]
-        )
-
-        if file_path:
-            img = Image.open(file_path).convert("RGB")
-            pred, label = self.inference(img)
-            print("Predicted:", label)
-
 # if __name__ == "__main__":
 #     vit_training = vitTraining()
 #     vit_training.fineTuned(existed=False)
 #     # vit_training.inference()
-#     vit_training.test()

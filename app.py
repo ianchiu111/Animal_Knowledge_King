@@ -96,6 +96,10 @@ def inference():
     except Exception as e:
         return jsonify({"error": f"Image processing failed: {str(e)}"}), 500
 
+@app.get("/")
+def health_check():
+    return {"status": f"server is running {version}"}
+
 @app.get("/health")
 def health():
     return {"status": f"server is running {version}"}
