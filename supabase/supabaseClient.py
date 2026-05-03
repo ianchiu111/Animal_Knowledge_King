@@ -16,8 +16,8 @@ load_dotenv(".env")
 class SupabaseClient:
     def __init__(self):
         
-        self.url = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
-        self.key = os.getenv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY")
+        self.url = os.getenv("SUPABASE_URL")
+        self.key = os.getenv("SUPABASE_PUBLISHABLE_KEY")
         self.client = create_client(self.url, self.key)
 
         # === Animal QA ===
